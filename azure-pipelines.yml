@@ -18,14 +18,14 @@ variables:
   - name: backend_main_secret_file_id1 # secret file used by the following cmdlet Terraform init, plan, apply and destroy
     value: "backend-main-jdld-1.json"
   - name: artifact_name
-    value: "AzureDevops-Introduction"
+    value: "AzureDevopsDemo"
 
 resources:
   repositories:
     - repository: Yaml_Templates # identifier (A-Z, a-z, 0-9, and underscore)
       type: github
-      endpoint: JamesDLD # name of the service connection to use (for non-Azure Repos types)
-      name: JamesDLD/terraform
+      endpoint: ava202020 # name of the service connection to use (for non-Azure Repos types)
+      name: ava202020/azuredevopsD emo
       #ref: refs/tags/0.0.1  # ref name to use, defaults to 'refs/heads/master'
 
 trigger:
@@ -37,7 +37,7 @@ trigger:
       - release/*
   paths:
     include:
-      - AzureDevops-Introduction/*
+      - AzureDevopsDemo/*
 
 stages:
   - stage: Build
@@ -56,7 +56,7 @@ stages:
           - template: pipeline/terraform.yml@Yaml_Templates
             parameters:
               version: $(terraform_version)
-              path: "./AzureDevops-Introduction/aks-k8s/"
+              path: "./AzureDevopsDemo/aks-k8s/"
               package_name: "aks-k8s"
               terraform_init: true
               terraform_plan: true

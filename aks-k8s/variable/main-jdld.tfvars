@@ -4,7 +4,7 @@
 # Core
 ###
 
-rg_infr_name = "infr-jdld-noprd-rg1"
+rg_infr_name = "infr-k8cicd-noprd-rg1"
 
 ###
 # Log & Certificate
@@ -30,6 +30,6 @@ key_vault = {
 # AKS
 ###
 kubernetes_cluster = {
-  name       = "aks-demo-jdld"
-  dns_prefix = "aksdemojdld" #Please see https://aka.ms/aks-naming-rules
+  name       = "azuredevops-demo"
+  dns_prefix = "azuredevopsdemo" #Please see https://aka.ms/aks-naming-rules
 }

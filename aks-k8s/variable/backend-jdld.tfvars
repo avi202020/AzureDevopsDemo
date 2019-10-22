@@ -1,7 +1,7 @@
 #Variables initialization
-resource_group_name = "infr-jdld-noprd-rg1"
+resource_group_name = "infr-k8cicd-noprd-rg1"
 
-storage_account_name = "infrsand1vpcjdld1" #Name must be unique
+storage_account_name = "nfrsand1vpck8cicd1" #Name must be unique
 
 container_name = "tfstate"
 
